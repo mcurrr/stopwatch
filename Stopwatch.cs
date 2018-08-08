@@ -9,7 +9,9 @@ namespace Timer{
 
         public void Start()
         {
-            if (this._inProgress) return;
+            if (this._inProgress) {
+                throw new InvalidOperationException("timer already has been started");
+            };
 
             this._inProgress = true;
             this.StartTime = DateTime.Now;

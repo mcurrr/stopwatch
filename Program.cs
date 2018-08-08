@@ -5,26 +5,33 @@ namespace Timer
     {
         static void Main()
         {
-            var stopwatch = new Stopwatch();
-            Console.WriteLine("Press any key to start timer");
-            Console.ReadKey();
-            stopwatch.Start();
-            stopwatch.Start();
+            try
+            {
+                var stopwatch = new Stopwatch();
+                Console.WriteLine("Press any key to start timer");
+                Console.ReadKey();
+                stopwatch.Start();
 
-            Console.WriteLine("Press any key to stop timer");
-            Console.ReadKey();
-            stopwatch.Stop();
+                Console.WriteLine("Press any key to stop timer");
+                Console.ReadKey();
+                stopwatch.Stop();
 
-            Console.WriteLine("Press any key to start timer again");
-            Console.ReadKey();
-            stopwatch.Start();
+                Console.WriteLine("Press any key to start timer again");
+                Console.ReadKey();
+                stopwatch.Start();
 
-            Console.WriteLine("Press any key to stop timer");
-            Console.ReadKey();
-            stopwatch.Stop();
+                Console.WriteLine("Press any key to stop timer");
+                Console.ReadKey();
+                stopwatch.Stop();
 
-            Console.WriteLine("Press any key to exit");
-            Console.ReadKey();
+                Console.WriteLine("Press any key to exit");
+                Console.ReadKey();
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Exception error has occured.");
+            }
+
         }
     }
 }
